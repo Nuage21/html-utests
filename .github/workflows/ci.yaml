@@ -7,4 +7,7 @@ on:
       - master
 jobs:
   show:
-    run: echo "Hello World from an Action!"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World!
+        run: echo "Hello World from an Action!"
