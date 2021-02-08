@@ -1,0 +1,10 @@
+name: Run Tests
+on:
+  push:
+    branches:
+      - master
+    pull_request:
+      - master
+jobs:
+  show:
+    run: echo "Hello World from an Action!"
