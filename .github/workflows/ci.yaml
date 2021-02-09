@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: '3.8'
           architecture: 'x64'
-      - run: python3 test.py
-      - run: python3 test-2.py
+      - name: Run 1st test
+        run: python3 test.py
+      - name:  Run 2nd test
+        run: python3 test-2.py
         
