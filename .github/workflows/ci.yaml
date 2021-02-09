@@ -7,17 +7,25 @@ on:
     branches:
       - master
 jobs:
-  action-test:
+  setup-python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: get repo to current dir
+        uses: actions/checkout@v2
       - name: setup python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
           architecture: 'x64'
+
+  test-1:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run 1st test
         run: python3 test.py
+  test-2:
+    runs-on: ubuntu-latest
+    steps:
       - name:  Run 2nd test
         run: python3 test-2.py
         
